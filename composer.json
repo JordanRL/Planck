@@ -1,5 +1,8 @@
 {
   "name": "samsara/planck",
+  "description": "A PHP library for dealing with spatial grids of any dimension with arbitrary precision.",
+  "keywords": ["grids", "grid", "space", "graph", "map"],
+  "license": "GPL-2.0",
   "require": {
     "php": ">=5.5.0"
   },

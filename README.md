@@ -91,7 +91,7 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 - ~~Events~~
 - ~~GridFactory~~
 - [Comments for public methods](https://github.com/JordanRL/Planck/issues/12)
-- [Docblocks for all methods](https://github.com/JordanRL/Planck/issues/11)
+- ~~Docblocks for all methods~~ [ticket](https://github.com/JordanRL/Planck/issues/11)
 - [Test coverage >=95%](https://github.com/JordanRL/Planck/issues/10)
 - [Instrumentation](https://github.com/JordanRL/Planck/issues/9)
 
