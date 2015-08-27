@@ -32,10 +32,21 @@ abstract class AbstractGrid
      */
     protected $addresses = [];
 
+    /**
+     * @var array
+     */
     protected $maxVals = [];
 
+    /**
+     * @var array
+     */
     protected $minVals = [];
 
+    /**
+     * @param string                $name
+     * @param string                $address
+     * @param GridInterface|null    $protoSubGrid
+     */
     public function __construct($name, $address = '', GridInterface $protoSubGrid = null)
     {
         $this->name = $name;
@@ -49,6 +60,10 @@ abstract class AbstractGrid
         }
     }
 
+    /**
+     * @param   GridInterface $grid
+     * @return  $this
+     */
     public function attachParentGrid(GridInterface $grid)
     {
         $this->parentGrid = $grid;
@@ -56,6 +71,12 @@ abstract class AbstractGrid
         return $this;
     }
 
+    /**
+     * @param   Node        $node
+     * @param   string|null $address
+     * @return  $this
+     * @throws  \Exception
+     */
     public function attachNode(Node $node, $address = null)
     {
         if (is_null($address)) {
@@ -67,6 +88,12 @@ abstract class AbstractGrid
         return $this;
     }
 
+    /**
+     * @param   string              $address
+     * @param   GridInterface|null  $grid
+     * @return  $this
+     * @throws  \Exception
+     */
     public function addAddress($address, GridInterface $grid = null)
     {
         $validAddress = $this->evalAddress($address);
@@ -83,11 +110,21 @@ abstract class AbstractGrid
         return $this;
     }
 
+    /**
+     * @param   string|null     $address
+     * @return  $this|AbstractGrid
+     * @throws  \Exception
+     */
     public function getLocation($address = null)
     {
         return $this->resolve($address);
     }
 
+    /**
+     * @param   string|null $address
+     * @return  Node
+     * @throws  \Exception
+     */
     public function getNode($address = null)
     {
         if (is_null($address)) {
@@ -97,6 +134,11 @@ abstract class AbstractGrid
         return $this->resolve($address)->getNode();
     }
 
+    /**
+     * @param   string|null $address
+     * @return  array
+     * @throws  \Exception
+     */
     public function getNodeProperties($address = null)
     {
         $location = $this->resolve($address);
@@ -111,6 +153,9 @@ abstract class AbstractGrid
         return $properties;
     }
 
+    /**
+     * @return  array
+     */
     public function getNodeEvents()
     {
         $properties = $this->node->getAllEventsProperties();
@@ -122,6 +167,9 @@ abstract class AbstractGrid
         return $properties;
     }
 
+    /**
+     * @return  $this
+     */
     public function resetGrid()
     {
         $this->name = '';
@@ -131,6 +179,10 @@ abstract class AbstractGrid
         return $this;
     }
 
+    /**
+     * @param   AbstractGrid|null   $grid
+     * @return  AbstractGrid
+     */
     protected function makeSubGrid(AbstractGrid $grid = null)
     {
         if (is_null($grid)) {
@@ -147,6 +199,11 @@ abstract class AbstractGrid
         return $return;
     }
 
+    /**
+     * @param   string  $address
+     * @return  array
+     * @throws  \Exception
+     */
     protected function evalAddress($address)
     {
         $return = [];
@@ -169,6 +226,11 @@ abstract class AbstractGrid
         return $return;
     }
 
+    /**
+     * @param   string $address
+     * @return  $this
+     * @throws  \Exception
+     */
     protected function resolve($address = '')
     {
         if (empty($address)) {
@@ -184,6 +246,10 @@ abstract class AbstractGrid
         }
     }
 
+    /**
+     * @param   string  $address
+     * @return  bool
+     */
     abstract protected function isValidAddress($address);
 
 }

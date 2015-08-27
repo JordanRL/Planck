@@ -2,11 +2,19 @@
 
 namespace Samsara\Planck\Factory;
 
+use Samsara\Planck\Core\AbstractGrid;
+
 class GridFactory
 {
     const TWO_DIMENSION = 'Samsara\\Planck\\Grid\\TwoDimensionGrid';
     const THREE_DIMENSION = 'Samsara\\Planck\\Grid\\ThreeDimensionGrid';
 
+    /**
+     * @param   string|AbstractGrid     $type
+     * @param   array                   $options
+     * @return  AbstractGrid
+     * @throws  \Exception
+     */
     public static function makeGrid($type, $options = [])
     {
         $reflector = new \ReflectionClass($type);

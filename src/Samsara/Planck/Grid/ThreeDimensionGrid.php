@@ -23,6 +23,14 @@ abstract class ThreeDimensionGrid extends AbstractGrid implements GridInterface
         self::AXIS_THREE    => 0
     ];
 
+    /**
+     * @param   string              $name
+     * @param   string              $address
+     * @param   GridInterface|null  $protoSubGrid
+     * @param   array|null          $maxVals
+     * @param   array|null          $minVals
+     * @throws  \Exception
+     */
     public function __construct($name, $address = '', GridInterface $protoSubGrid = null, array $maxVals = null, array $minVals = null)
     {
         if (!is_null($maxVals) && count($maxVals)) {
@@ -68,6 +76,10 @@ abstract class ThreeDimensionGrid extends AbstractGrid implements GridInterface
         parent::__construct($name, $address, $protoSubGrid);
     }
 
+    /**
+     * @param   string  $address
+     * @return  bool
+     */
     protected function isValidAddress($address)
     {
         if (is_string($address)) {

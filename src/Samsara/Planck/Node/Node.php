@@ -11,6 +11,12 @@ class Node extends AbstractNode
      */
     protected $events = [];
 
+    /**
+     * @param   string  $key
+     * @param   Event   $event
+     * @return  $this
+     * @throws  \Exception
+     */
     public function attachEvent($key, Event $event)
     {
         if (array_key_exists($key, $this->events)) {
@@ -22,6 +28,10 @@ class Node extends AbstractNode
         return $this;
     }
 
+    /**
+     * @param   string  $key
+     * @return  null|Event
+     */
     public function getEvent($key)
     {
         if (array_key_exists($key, $this->events)) {
@@ -31,6 +41,10 @@ class Node extends AbstractNode
         return null;
     }
 
+    /**
+     * @param   string  $key
+     * @return  $this
+     */
     public function removeEvent($key)
     {
         if (array_key_exists($key, $this->events)) {
@@ -40,6 +54,9 @@ class Node extends AbstractNode
         return $this;
     }
 
+    /**
+     * @return  array
+     */
     public function getAllEventsProperties()
     {
         $properties = [];

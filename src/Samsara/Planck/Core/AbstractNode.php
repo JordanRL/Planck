@@ -4,9 +4,16 @@ namespace Samsara\Planck\Core;
 
 abstract class AbstractNode
 {
-
+    /**
+     * @var array
+     */
     protected $properties = [];
 
+    /**
+     * @param   string  $key
+     * @param   string  $value
+     * @return  $this
+     */
     public function set($key, $value)
     {
         $this->properties[$key] = $value;
@@ -14,6 +21,10 @@ abstract class AbstractNode
         return $this;
     }
 
+    /**
+     * @param   string  $key
+     * @return  null|mixed
+     */
     public function get($key)
     {
         if (array_key_exists($key, $this->properties)) {
@@ -23,6 +34,9 @@ abstract class AbstractNode
         return null;
     }
 
+    /**
+     * @return  array
+     */
     public function getAllProperties()
     {
         return $this->properties;
