@@ -36,7 +36,7 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 > > AXIS1.AXIS2.AXISN:AXIS1.AXIS2.AXISN:...
 
-> The period (or full stop) separates the different axis within a grid, and the colon separates the sub-grids. The left-most address in such a chain represents the parent grid, and as the grids can nest indefinitely, the address may have as many sub-grid sections as you with separated with colons.
+> The period (or full stop) separates the different axis within a grid, and the colon separates the sub-grids. The left-most address in such a chain represents the parent grid, and as the grids can nest indefinitely, the address may have as many sub-grid sections as you want separated with colons.
 
 > This is an example of an address for a three dimensional grid, nested three times:
 
