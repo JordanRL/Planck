@@ -80,6 +80,26 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 > These projections may be approximate at first.
 
+## Roadmap
+
+### v1.0.0 (September 1st, 2015)
+
+- ~~Grids~~
+  - ~~ThreeDimensionGrid~~
+  - ~~TwoDimensionGrid~~
+- ~~Nodes~~
+- ~~Events~~
+- ~~GridFactory~~
+- [Comments for public methods](https://github.com/JordanRL/Planck/issues/12)
+- [Docblocks for all methods](https://github.com/JordanRL/Planck/issues/11)
+- [Test coverage >=95%](https://github.com/JordanRL/Planck/issues/10)
+- [Instrumentation](https://github.com/JordanRL/Planck/issues/9)
+
+### v1.1.0 (October 2nd, 2015)
+
+- [GridMath Operators](https://github.com/JordanRL/Planck/issues/13)
+  - EuclideanMathOperator
+
 ## Usage
 
 New Grids may be instantiated directly, or may be created using the included GridFactory. As this project matures, the GridFactory will provide more useful ways to simplify Grid definition and instantiation, particularly when it comes to defining non-Euclidean Grids (which are not explicitly supported at the moment).
