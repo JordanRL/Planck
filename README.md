@@ -261,6 +261,7 @@ class FourDimensionGrid extends AbstractGrid implements GridInterface
         return false;
     }
 }
+```
 
 ## Contributing
 
