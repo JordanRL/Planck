@@ -22,7 +22,7 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 ## Concepts
 
-### Currently used concepts
+### Current Concepts
 
 #### Grids
 
@@ -261,6 +261,7 @@ class FourDimensionGrid extends AbstractGrid implements GridInterface
         return false;
     }
 }
+```
 
 ## Contributing
 
