@@ -26,7 +26,7 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 #### Grids
 
-> The concept of a grid in this project is an object which extends AbstractGrid and implements the GridInterface. A grid has a number of axis depending on the dimension of space the grid is intended to represent. So a three dimensional grid will have three axis.
+> The concept of a grid in this project is an object which extends AbstractGrid and implements the GridInterface. A grid has a number of axes depending on the dimension of space the grid is intended to represent. So a three dimensional grid will have three axes.
 
 > Each axis has an independently defined range (maximum and minimum valid values). The grid itself is not explicitly and exhaustively defined at every possible node. (For a 100x100x100 3D grid, this would be an array of size 1 million). Instead, the grid provides you with the tools to define things that are occurring at specific places, or things which are occurring across areas (using Node Events).
 
@@ -36,7 +36,7 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 > > AXIS1.AXIS2.AXISN:AXIS1.AXIS2.AXISN:...
 
-> The period (or full stop) separates the different axis within a grid, and the colon separates the sub-grids. The left-most address in such a chain represents the parent grid, and as the grids can nest indefinitely, the address may have as many sub-grid sections as you want separated with colons.
+> The period (or full stop) separates the different axes within a grid, and the colon separates the sub-grids. The left-most address in such a chain represents the parent grid, and as the grids can nest indefinitely, the address may have as many sub-grid sections as you want separated with colons.
 
 > This is an example of an address for a three dimensional grid, nested three times:
 
@@ -188,13 +188,15 @@ class FourDimensionGrid extends AbstractGrid implements GridInterface
     protected $maxVals = [
         self::AXIS_ONE      => 100,
         self::AXIS_TWO      => 10,
-        self::AXIS_THREE    => 10
+        self::AXIS_THREE    => 10,
+        self::AXIS_FOUR     => 50
     ];
 
     protected $minVals = [
         self::AXIS_ONE      => 0,
         self::AXIS_TWO      => 0,
-        self::AXIS_THREE    => 0
+        self::AXIS_THREE    => 0,
+        self::ACIS_FOUR     => -50
     ];
 
     public function __construct($name, $address = '', GridInterface $protoSubGrid = null, array $maxVals = null, array $minVals = null)
