@@ -8,15 +8,6 @@ interface GridInterface
 {
 
     /**
-     * @param   string              $name
-     * @param   string              $address
-     * @param   GridInterface|null  $protoSubGrid
-     * @param   array|null          $maxVals
-     * @param   array|null          $minVals
-     */
-    public function __construct($name, $address = '', GridInterface $protoSubGrid = null, array $maxVals = null, array $minVals = null);
-
-    /**
      * @param   GridInterface   $grid
      * @return  $this
      */
