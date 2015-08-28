@@ -196,7 +196,7 @@ class FourDimensionGrid extends AbstractGrid implements GridInterface
         self::AXIS_ONE      => 0,
         self::AXIS_TWO      => 0,
         self::AXIS_THREE    => 0,
-        self::ACIS_FOUR     => -50
+        self::AXIS_FOUR     => -50
     ];
 
     public function __construct($name, $address = '', GridInterface $protoSubGrid = null, array $maxVals = null, array $minVals = null)
