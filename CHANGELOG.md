@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased] - [unreleased]
 ### Added
 - CHANGELOG.md (this file)
+- "Roadmap" section in README.md
+- Package meta-information in composer.json
+- Docblocks for all methods in the project
+
+### Changed
+- Bad spelling/grammar in README.md (axis -> axes)
 
 ## [0.1.1] - 2015-08-24
 ### Added
