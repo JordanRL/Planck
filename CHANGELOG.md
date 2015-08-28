@@ -11,6 +11,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Bad spelling/grammar in README.md (axis -> axes)
+- Changed AbstractGrid constructor to set self address when a non-empty address is provided, instead of creating it as a sub-address
+
+### Removed
+- __construct() from GridInterface. (AbstractGrid should satisfy this on its own, and this allows more flexibility in extension.)
 
 ## [0.1.1] - 2015-08-24
 ### Added

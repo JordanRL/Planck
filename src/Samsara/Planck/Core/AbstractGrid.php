@@ -28,6 +28,11 @@ abstract class AbstractGrid
     protected $name;
 
     /**
+     * @var string
+     */
+    protected $address;
+
+    /**
      * @var AbstractGrid[]
      */
     protected $addresses = [];
@@ -56,7 +61,7 @@ abstract class AbstractGrid
         }
 
         if (!empty($address)) {
-            $this->addAddress($address);
+            $this->address = $address;
         }
     }
 
