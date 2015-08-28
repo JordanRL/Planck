@@ -99,6 +99,13 @@ The project namespace is `Samsara\Planck\*`. You can view the project on [Packag
 
 - [GridMath Operators](https://github.com/JordanRL/Planck/issues/13)
   - EuclideanMathOperator
+  
+### v1.2.0 or v2.0.0 (Future)
+
+- Pathfinding
+  - [A* Algorithm](https://github.com/JordanRL/Planck/issues/2)
+  - Dijkstra's Algorithm
+  - Greedy Best-First Algorithm
 
 ## Usage
 
